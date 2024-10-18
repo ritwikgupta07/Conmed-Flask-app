@@ -2,4 +2,4 @@ Flask
 openai
 requests
 Werkzeug
-dotenv
+python-dotenv
