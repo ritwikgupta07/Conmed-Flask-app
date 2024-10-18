@@ -1,0 +1,26 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'  # Adjust to your needs
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run script
+        env:  # Set environment variables for your secrets
+          OPENAI: ${{ secrets.OPENAI }}
+          ELEAPI: ${{ secrets.ELEAPI }}
+        run: |
+          python your_script.py  # Replace with your script's filename
