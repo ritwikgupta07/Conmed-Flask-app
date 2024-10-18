@@ -23,4 +23,4 @@ jobs:
           OPENAI: ${{ secrets.OPENAI }}
           ELEAPI: ${{ secrets.ELEAPI }}
         run: |
-          python your_script.py  # Replace with your script's filename
+          python flask_app.py  # Replace with your script's filename
