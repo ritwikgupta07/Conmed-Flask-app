@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify, send_file, render_template
 
 
 # Add your OpenAI API key
-OPENAI_API_KEY = OpenAI
+OPENAI_API_KEY = OPENAI
 openai.api_key = OPENAI_API_KEY
 
 # Add your ElevenLabs API key
