@@ -4,17 +4,11 @@ import requests
 import uuid
 from flask import Flask, request, jsonify, send_file, render_template
 
-# Access the secrets using environment variables
-openai_key = os.getenv('OPENAI')
-eleapi_key = os.getenv('ELEAPI')
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
 load_dotenv()
 
 # Get the variables
-openai_secret = os.getenv('OPENAI')
-eleapi_secret = os.getenv('ELEAPI')
+OPENAI = os.getenv('OPENAI')
+ELEAPI = os.getenv('ELEAPI')
 # Add your OpenAI API key
 OPENAI_API_KEY = OPENAI
 openai.api_key = OPENAI_API_KEY
