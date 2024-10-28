@@ -151,4 +151,5 @@ if ELEVENLABS_API_KEY:
         ELEVENLABS_VOICE_NAME = ELEVENLABS_ALL_VOICES[0]["name"]
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
+    # app.run()
