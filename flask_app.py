@@ -3,8 +3,7 @@ import os
 import requests
 import uuid
 from flask import Flask, request, jsonify, send_file, render_template
-
-load_dotenv()
+from dotenv import load_dotenv
 
 # Get the variables
 OPENAI = os.getenv('OPENAI')
